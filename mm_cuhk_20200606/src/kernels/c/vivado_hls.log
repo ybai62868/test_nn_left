@@ -1,0 +1,384 @@
+================================================================
+  Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC
+  Version 2017.1
+  Build 1846317 on Thu Jun 22 18:17:09 MDT 2017
+  Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
+================================================================
+INFO: [HLS 200-10] Running '/curr/software/Xilinx/SDx/2017.1/Vivado_HLS/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'xuechao' on host 'merlin1.fcs-internal' (Linux_x86_64 version 3.10.0-327.18.2.el7.x86_64) on Mon May 21 08:44:20 PDT 2018
+INFO: [HLS 200-10] In directory '/curr/xuechao/ali_nn/ali_nn_20180514/src/kernels/c'
+INFO: [HLS 200-10] Opening and resetting project '/curr/xuechao/ali_nn/ali_nn_20180514/src/kernels/c/cnn_prj'.
+INFO: [HLS 200-10] Adding design file 'cnn_top.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'cnn_top.h' to the project
+INFO: [HLS 200-10] Adding test bench file '../../host/host.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file '../../host/cnn.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file '../../host/util.cpp' to the project
+INFO: [HLS 200-10] Opening and resetting solution '/curr/xuechao/ali_nn/ali_nn_20180514/src/kernels/c/cnn_prj/solution1'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to 'xcku115-flvb2104-2-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../../host/util.cpp in debug mode
+   Compiling ../../../../../../host/cnn.cpp in debug mode
+   Compiling ../../../../../../host/host.cpp in debug mode
+   Compiling ../../../../cnn_top.cpp in debug mode
+   Generating csim.exe
+HLS Model TEST: PASSED
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-10] Analyzing design file 'cnn_top.cpp' ... 
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:40 ; elapsed = 00:00:18 . Memory (MB): peak = 447.754 ; gain = 17.711 ; free physical = 40128 ; free virtual = 109037
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:40 ; elapsed = 00:00:18 . Memory (MB): peak = 447.754 ; gain = 17.711 ; free physical = 40128 ; free virtual = 109039
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:40 ; elapsed = 00:00:18 . Memory (MB): peak = 447.754 ; gain = 17.711 ; free physical = 40120 ; free virtual = 109033
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] ./././conv2d/conv2d.cpp:235: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:41 ; elapsed = 00:00:19 . Memory (MB): peak = 447.754 ; gain = 17.711 ; free physical = 40118 ; free virtual = 109031
+WARNING: [XFORM 203-505] Ignore pipeline pragma in Loop whose tripcount is only 1 (./././conv2d/conv2d.cpp:231) in function 'store_ofmap'.
+WARNING: [XFORM 203-505] Ignore pipeline pragma in Loop whose tripcount is only 1 (./././conv2d/conv2d.cpp:81) in function 'load_wt'.
+WARNING: [XFORM 203-505] Ignore pipeline pragma in Loop whose tripcount is only 1 (./././conv2d/conv2d.cpp:29) in function 'load_ifmap'.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (./././conv2d/conv2d.cpp:225) in function 'store_ofmap' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1.1.1' (./././conv2d/conv2d.cpp:126) in function 'conv2d_calc_tile' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (./././conv2d/conv2d.cpp:74) in function 'load_wt' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (./././conv2d/conv2d.cpp:23) in function 'load_ifmap' for pipelining.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (./././conv2d/conv2d.cpp:229) in function 'store_ofmap' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1' (./././conv2d/conv2d.cpp:232) in function 'store_ofmap' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1.1' (./././conv2d/conv2d.cpp:134) in function 'conv2d_calc_tile' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1.1.1' (./././conv2d/conv2d.cpp:136) in function 'conv2d_calc_tile' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1.2' (./././conv2d/conv2d.cpp:146) in function 'conv2d_calc_tile' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1.2.1' (./././conv2d/conv2d.cpp:149) in function 'conv2d_calc_tile' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1.2.1.1' (./././conv2d/conv2d.cpp:153) in function 'conv2d_calc_tile' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1.3' (./././conv2d/conv2d.cpp:172) in function 'conv2d_calc_tile' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1.3.1' (./././conv2d/conv2d.cpp:175) in function 'conv2d_calc_tile' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (./././conv2d/conv2d.cpp:79) in function 'load_wt' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1' (./././conv2d/conv2d.cpp:83) in function 'load_wt' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1' (./././conv2d/conv2d.cpp:27) in function 'load_ifmap' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1.1.1' (./././conv2d/conv2d.cpp:30) in function 'load_ifmap' completely.
+INFO: [XFORM 203-101] Partitioning array 'ifmap_buf0' (./././conv2d/conv2d.cpp:272) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifmap_buf1' (./././conv2d/conv2d.cpp:273) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf0' (./././conv2d/conv2d.cpp:275) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf1' (./././conv2d/conv2d.cpp:276) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofmap_buf0' (./././conv2d/conv2d.cpp:278) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofmap_reg' (./././conv2d/conv2d.cpp:120) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifmap_buf0.0' (./././conv2d/conv2d.cpp:272) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifmap_buf0.1' (./././conv2d/conv2d.cpp:272) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifmap_buf0.2' (./././conv2d/conv2d.cpp:272) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifmap_buf0.3' (./././conv2d/conv2d.cpp:272) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifmap_buf1.0' (./././conv2d/conv2d.cpp:273) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifmap_buf1.1' (./././conv2d/conv2d.cpp:273) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifmap_buf1.2' (./././conv2d/conv2d.cpp:273) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ifmap_buf1.3' (./././conv2d/conv2d.cpp:273) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf0.0' (./././conv2d/conv2d.cpp:275) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf0.1' (./././conv2d/conv2d.cpp:275) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf0.2' (./././conv2d/conv2d.cpp:275) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf0.3' (./././conv2d/conv2d.cpp:275) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf0.4' (./././conv2d/conv2d.cpp:275) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf0.5' (./././conv2d/conv2d.cpp:275) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf0.6' (./././conv2d/conv2d.cpp:275) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf0.7' (./././conv2d/conv2d.cpp:275) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf0.8' (./././conv2d/conv2d.cpp:275) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf0.9' (./././conv2d/conv2d.cpp:275) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf0.10' (./././conv2d/conv2d.cpp:275) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf0.11' (./././conv2d/conv2d.cpp:275) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf0.12' (./././conv2d/conv2d.cpp:275) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf0.13' (./././conv2d/conv2d.cpp:275) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf0.14' (./././conv2d/conv2d.cpp:275) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf0.15' (./././conv2d/conv2d.cpp:275) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf1.0' (./././conv2d/conv2d.cpp:276) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf1.1' (./././conv2d/conv2d.cpp:276) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf1.2' (./././conv2d/conv2d.cpp:276) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf1.3' (./././conv2d/conv2d.cpp:276) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf1.4' (./././conv2d/conv2d.cpp:276) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf1.5' (./././conv2d/conv2d.cpp:276) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf1.6' (./././conv2d/conv2d.cpp:276) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf1.7' (./././conv2d/conv2d.cpp:276) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf1.8' (./././conv2d/conv2d.cpp:276) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf1.9' (./././conv2d/conv2d.cpp:276) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf1.10' (./././conv2d/conv2d.cpp:276) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf1.11' (./././conv2d/conv2d.cpp:276) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf1.12' (./././conv2d/conv2d.cpp:276) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf1.13' (./././conv2d/conv2d.cpp:276) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf1.14' (./././conv2d/conv2d.cpp:276) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wt_buf1.15' (./././conv2d/conv2d.cpp:276) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofmap_buf0.0' (./././conv2d/conv2d.cpp:278) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofmap_buf0.1' (./././conv2d/conv2d.cpp:278) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofmap_buf0.2' (./././conv2d/conv2d.cpp:278) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'ofmap_buf0.3' (./././conv2d/conv2d.cpp:278) in dimension 2 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./././conv2d/conv2d.cpp:226:3) to (./././conv2d/conv2d.cpp:225:47) in function 'store_ofmap'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./././conv2d/conv2d.cpp:90:4) to (./././conv2d/conv2d.cpp:74:47) in function 'load_wt'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./././conv2d/conv2d.cpp:36:4) to (./././conv2d/conv2d.cpp:23:47) in function 'load_ifmap'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (./././conv2d/conv2d.cpp:130:3) to (./././conv2d/conv2d.cpp:126:27) in function 'conv2d_calc_tile'... converting 105 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv2d_calc_tile' (./././conv2d/conv2d.cpp:111)...512 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:43 ; elapsed = 00:00:21 . Memory (MB): peak = 574.754 ; gain = 144.711 ; free physical = 40084 ; free virtual = 109000
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1.1' (./././conv2d/conv2d.cpp:125:17) in function 'conv2d_calc_tile'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (./././conv2d/conv2d.cpp:124:17) in function 'conv2d_calc_tile'.
+INFO: [XFORM 203-811] Inferring bus burst write of length 2048 on port 'ofmap.V' (./././conv2d/conv2d.cpp:262:3).
+INFO: [XFORM 203-811] Inferring bus burst read of length 512 on port 'weight.V' (./././conv2d/conv2d.cpp:77:53).
+INFO: [XFORM 203-811] Inferring bus burst read of length 512 on port 'ifmap.V' (./././conv2d/conv2d.cpp:26:55).
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:45 ; elapsed = 00:00:23 . Memory (MB): peak = 638.754 ; gain = 208.711 ; free physical = 40033 ; free virtual = 108950
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'cnn_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_ifmap' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 1, Depth: 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 22.83 seconds; current allocated memory: 139.591 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 140.217 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_wt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 1, Depth: 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.41 seconds; current allocated memory: 141.258 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 142.577 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2d_calc_tile' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation (./././conv2d/conv2d.cpp:178) of variable 'ofmap_reg[0]', ./././conv2d/conv2d.cpp:167 on array 'ofmap_buf_0_0' and 'load' operation ('ofmap_buf_0_0_load', ./././conv2d/conv2d.cpp:139) on array 'ofmap_buf_0_0'.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 2, Depth: 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 3.07 seconds; current allocated memory: 148.556 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.99 seconds; current allocated memory: 155.189 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store_ofmap' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result: Target II: 1, Final II: 1, Depth: 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.07 seconds; current allocated memory: 156.820 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 158.221 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2d' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.31 seconds; current allocated memory: 159.275 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 3.74 seconds; current allocated memory: 162.173 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.15 seconds; current allocated memory: 163.280 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.06 seconds; current allocated memory: 163.697 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_ifmap' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_ifmap'.
+INFO: [HLS 200-111]  Elapsed time: 2.91 seconds; current allocated memory: 165.696 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_wt' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_wt'.
+INFO: [HLS 200-111]  Elapsed time: 0.36 seconds; current allocated memory: 169.665 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2d_calc_tile' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'conv2d_calc_tile' is 16792 from HDL expression: ((1'b1 == ap_enable_reg_pp0_iter0) & (1'b1 == ap_CS_fsm_pp0_stage1) & (ap_block_pp0_stage1 == 1'b0))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2d_calc_tile'.
+INFO: [HLS 200-111]  Elapsed time: 0.91 seconds; current allocated memory: 184.182 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'store_ofmap' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'cnn_top_mux_647_32_1' to 'cnn_top_mux_647_3bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'cnn_top_mux_647_3bkb': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'store_ofmap'.
+INFO: [HLS 200-111]  Elapsed time: 6.11 seconds; current allocated memory: 217.033 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2d' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_0_0' to 'conv2d_ifmap_buf0cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_0_1' to 'conv2d_ifmap_buf0dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_0_2' to 'conv2d_ifmap_buf0eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_0_3' to 'conv2d_ifmap_buf0fYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_0_4' to 'conv2d_ifmap_buf0g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_0_5' to 'conv2d_ifmap_buf0hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_0_6' to 'conv2d_ifmap_buf0ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_0_7' to 'conv2d_ifmap_buf0jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_1_0' to 'conv2d_ifmap_buf0kbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_1_1' to 'conv2d_ifmap_buf0lbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_1_2' to 'conv2d_ifmap_buf0mb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_1_3' to 'conv2d_ifmap_buf0ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_1_4' to 'conv2d_ifmap_buf0ocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_1_5' to 'conv2d_ifmap_buf0pcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_1_6' to 'conv2d_ifmap_buf0qcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_1_7' to 'conv2d_ifmap_buf0rcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_2_0' to 'conv2d_ifmap_buf0sc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_2_1' to 'conv2d_ifmap_buf0tde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_2_2' to 'conv2d_ifmap_buf0udo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_2_3' to 'conv2d_ifmap_buf0vdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_2_4' to 'conv2d_ifmap_buf0wdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_2_5' to 'conv2d_ifmap_buf0xdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_2_6' to 'conv2d_ifmap_buf0yd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_2_7' to 'conv2d_ifmap_buf0zec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_3_0' to 'conv2d_ifmap_buf0Aem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_3_1' to 'conv2d_ifmap_buf0Bew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_3_2' to 'conv2d_ifmap_buf0CeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_3_3' to 'conv2d_ifmap_buf0DeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_3_4' to 'conv2d_ifmap_buf0Ee0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_3_5' to 'conv2d_ifmap_buf0Ffa' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_3_6' to 'conv2d_ifmap_buf0Gfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf0_3_7' to 'conv2d_ifmap_buf0Hfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_0_0' to 'conv2d_ifmap_buf1IfE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_0_1' to 'conv2d_ifmap_buf1JfO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_0_2' to 'conv2d_ifmap_buf1KfY' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_0_3' to 'conv2d_ifmap_buf1Lf8' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_0_4' to 'conv2d_ifmap_buf1Mgi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_0_5' to 'conv2d_ifmap_buf1Ngs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_0_6' to 'conv2d_ifmap_buf1OgC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_0_7' to 'conv2d_ifmap_buf1PgM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_1_0' to 'conv2d_ifmap_buf1QgW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_1_1' to 'conv2d_ifmap_buf1Rg6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_1_2' to 'conv2d_ifmap_buf1Shg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_1_3' to 'conv2d_ifmap_buf1Thq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_1_4' to 'conv2d_ifmap_buf1UhA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_1_5' to 'conv2d_ifmap_buf1VhK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_1_6' to 'conv2d_ifmap_buf1WhU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_1_7' to 'conv2d_ifmap_buf1Xh4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_2_0' to 'conv2d_ifmap_buf1Yie' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_2_1' to 'conv2d_ifmap_buf1Zio' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_2_2' to 'conv2d_ifmap_buf10iy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_2_3' to 'conv2d_ifmap_buf11iI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_2_4' to 'conv2d_ifmap_buf12iS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_2_5' to 'conv2d_ifmap_buf13i2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_2_6' to 'conv2d_ifmap_buf14jc' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_2_7' to 'conv2d_ifmap_buf15jm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_3_0' to 'conv2d_ifmap_buf16jw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_3_1' to 'conv2d_ifmap_buf17jG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_3_2' to 'conv2d_ifmap_buf18jQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_3_3' to 'conv2d_ifmap_buf19j0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_3_4' to 'conv2d_ifmap_buf1bak' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_3_5' to 'conv2d_ifmap_buf1bbk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_3_6' to 'conv2d_ifmap_buf1bck' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ifmap_buf1_3_7' to 'conv2d_ifmap_buf1bdk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_0_0' to 'conv2d_ofmap_buf0bek' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_0_1' to 'conv2d_ofmap_buf0bfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_0_2' to 'conv2d_ofmap_buf0bgk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_0_3' to 'conv2d_ofmap_buf0bhl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_0_4' to 'conv2d_ofmap_buf0bil' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_0_5' to 'conv2d_ofmap_buf0bjl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_0_6' to 'conv2d_ofmap_buf0bkl' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_0_7' to 'conv2d_ofmap_buf0bll' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_0_8' to 'conv2d_ofmap_buf0bml' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_0_9' to 'conv2d_ofmap_buf0bnm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_0_10' to 'conv2d_ofmap_buf0bom' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_0_11' to 'conv2d_ofmap_buf0bpm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_0_12' to 'conv2d_ofmap_buf0bqm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_0_13' to 'conv2d_ofmap_buf0brm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_0_14' to 'conv2d_ofmap_buf0bsm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_0_15' to 'conv2d_ofmap_buf0btn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_1_0' to 'conv2d_ofmap_buf0bun' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_1_1' to 'conv2d_ofmap_buf0bvn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_1_2' to 'conv2d_ofmap_buf0bwn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_1_3' to 'conv2d_ofmap_buf0bxn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_1_4' to 'conv2d_ofmap_buf0byn' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_1_5' to 'conv2d_ofmap_buf0bzo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_1_6' to 'conv2d_ofmap_buf0bAo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_1_7' to 'conv2d_ofmap_buf0bBo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_1_8' to 'conv2d_ofmap_buf0bCo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_1_9' to 'conv2d_ofmap_buf0bDo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_1_10' to 'conv2d_ofmap_buf0bEo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_1_11' to 'conv2d_ofmap_buf0bFp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_1_12' to 'conv2d_ofmap_buf0bGp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_1_13' to 'conv2d_ofmap_buf0bHp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_1_14' to 'conv2d_ofmap_buf0bIp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_1_15' to 'conv2d_ofmap_buf0bJp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_2_0' to 'conv2d_ofmap_buf0bKp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_2_1' to 'conv2d_ofmap_buf0bLp' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_2_2' to 'conv2d_ofmap_buf0bMq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_2_3' to 'conv2d_ofmap_buf0bNq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_2_4' to 'conv2d_ofmap_buf0bOq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_2_5' to 'conv2d_ofmap_buf0bPq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_2_6' to 'conv2d_ofmap_buf0bQq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_2_7' to 'conv2d_ofmap_buf0bRq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_2_8' to 'conv2d_ofmap_buf0bSr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_2_9' to 'conv2d_ofmap_buf0bTr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_2_10' to 'conv2d_ofmap_buf0bUr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_2_11' to 'conv2d_ofmap_buf0bVr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_2_12' to 'conv2d_ofmap_buf0bWr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_2_13' to 'conv2d_ofmap_buf0bXr' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_2_14' to 'conv2d_ofmap_buf0bYs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_2_15' to 'conv2d_ofmap_buf0bZs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_3_0' to 'conv2d_ofmap_buf0b0s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_3_1' to 'conv2d_ofmap_buf0b1s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_3_2' to 'conv2d_ofmap_buf0b2s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_3_3' to 'conv2d_ofmap_buf0b3s' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_3_4' to 'conv2d_ofmap_buf0b4t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_3_5' to 'conv2d_ofmap_buf0b5t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_3_6' to 'conv2d_ofmap_buf0b6t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_3_7' to 'conv2d_ofmap_buf0b7t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_3_8' to 'conv2d_ofmap_buf0b8t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_3_9' to 'conv2d_ofmap_buf0b9t' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_3_10' to 'conv2d_ofmap_buf0cau' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_3_11' to 'conv2d_ofmap_buf0cbu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_3_12' to 'conv2d_ofmap_buf0ccu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_3_13' to 'conv2d_ofmap_buf0cdu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_3_14' to 'conv2d_ofmap_buf0ceu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'conv2d_ofmap_buf0_3_15' to 'conv2d_ofmap_buf0cfu' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'conv2d' is 7968, found 3 HDL expressions with this fanout: (ping_pong_flag_reg_1654 == 1'd1), (1'b1 == ap_CS_fsm_state5), (1'd0 == ping_pong_flag_reg_1654)
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2d'.
+INFO: [HLS 200-111]  Elapsed time: 4.04 seconds; current allocated memory: 235.984 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_top/ifmap' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_top/weights' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_top/ofmap' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_top/ifmap_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_top/weights_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_top/ofmap_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'cnn_top' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'ifmap_V', 'weights_V' and 'ofmap_V' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn_top'.
+INFO: [HLS 200-111]  Elapsed time: 7.02 seconds; current allocated memory: 250.336 MB.
+INFO: [RTMG 210-278] Implementing memory 'conv2d_ifmap_buf0cud_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'conv2d_wt_buf0_0_0_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'conv2d_wt_buf0_3_1_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'conv2d_ofmap_buf0bek_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:15 ; elapsed = 00:01:06 . Memory (MB): peak = 766.754 ; gain = 336.711 ; free physical = 39868 ; free virtual = 108835
+INFO: [SYSC 207-301] Generating SystemC RTL for cnn_top.
+INFO: [VHDL 208-304] Generating VHDL RTL for cnn_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for cnn_top.
+INFO: [HLS 200-112] Total elapsed time: 65.83 seconds; peak allocated memory: 250.336 MB.

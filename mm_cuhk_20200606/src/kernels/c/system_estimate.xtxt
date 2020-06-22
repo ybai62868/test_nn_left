@@ -1,0 +1,54 @@
+===============================================================================
+Version:    xocc v2017.1_sdx (64-bit)
+Build:      SW Build 1915620 on Thu Jun 22 17:54:59 MDT 2017
+Copyright:  Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+Created:    Sun May 13 09:23:00 2018
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             cnn_hw_emu
+Target Device:           xilinx:xil-accel-rd-ku115:4ddr-xpr:4.0
+Target Clock:            100MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+cnn_top      c     fpga0:OCL_REGION_0  cnn_hw_emu      1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     cnn_hw_emu
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name       Target Frequency  Estimated Frequency
+------------  -----------  ----------------  ----------------  -------------------
+cnn_top_1     cnn_top      load_ifmap        100               136.986298
+cnn_top_1     cnn_top      load_wt           100               136.986298
+cnn_top_1     cnn_top      conv2d_calc_tile  100               151.745071
+cnn_top_1     cnn_top      store_ofmap       100               136.986298
+cnn_top_1     cnn_top      conv2d            100               136.986298
+cnn_top_1     cnn_top      cnn_top           100               136.986298
+
+Latency Information (clock cycles)
+Compute Unit  Kernel Name  Module Name       Start Interval  Best Case  Avg Case  Worst Case
+------------  -----------  ----------------  --------------  ---------  --------  ----------
+cnn_top_1     cnn_top      load_ifmap        1 ~ 522         1          262       522
+cnn_top_1     cnn_top      load_wt           1 ~ 522         1          262       522
+cnn_top_1     cnn_top      conv2d_calc_tile  1 ~ 1027        1          514       1027
+cnn_top_1     cnn_top      store_ofmap       2056            2056       2056      2056
+cnn_top_1     cnn_top      conv2d            33769 ~ 312841  33769      173305    312841
+cnn_top_1     cnn_top      cnn_top           33771 ~ 312843  33770      173306    312842
+
+Area Information
+Compute Unit  Kernel Name  Module Name       FF     LUT    DSP   BRAM
+------------  -----------  ----------------  -----  -----  ----  ----
+cnn_top_1     cnn_top      load_ifmap        504    672    0     0
+cnn_top_1     cnn_top      load_wt           508    672    0     0
+cnn_top_1     cnn_top      conv2d_calc_tile  16952  29986  1536  0
+cnn_top_1     cnn_top      store_ofmap       8874   3179   0     0
+cnn_top_1     cnn_top      conv2d            26895  54308  1536  480
+cnn_top_1     cnn_top      cnn_top           29965  57966  1536  528
+-------------------------------------------------------------------------------
